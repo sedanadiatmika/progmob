@@ -78,7 +78,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        dateFormatter = new SimpleDateFormat("YYYY-MM-dd", Locale.US);
+        dateFormatter = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
 
         tgl_lahir = (EditText) findViewById(R.id.tgl_lahir);
         btDatePicker = (Button) findViewById(R.id.bt_datepicker);

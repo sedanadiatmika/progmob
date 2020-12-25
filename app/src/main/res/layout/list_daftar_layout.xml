@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/judulno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nomor Antrian :"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                android:textColor="#fff"/>
+            <TextView
+                android:id="@+id/noAntrian"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintLeft_toRightOf="@+id/judulno"
+                android:layout_weight="1"
+                android:hint="No Antrian"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+               />
+
+            <TextView
+                android:id="@+id/judultgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Periksa  :"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/judulno"
+                android:textSize="18sp"
+                android:textColor="#fff"/>
+            <TextView
+                android:id="@+id/tanggal_periksa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Tanggal Periksa"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/judultgl"
+                app:layout_constraintTop_toBottomOf="@+id/noAntrian" />
+
+            <TextView
+                android:id="@+id/judulnama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Pasien :"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/judultgl"
+                android:textSize="18sp"
+                android:textColor="#fff"/>
+            <TextView
+                android:id="@+id/nama_pasien"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Nama Pasien"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@id/judulnama"
+                app:layout_constraintTop_toBottomOf="@+id/tanggal_periksa" />
+
+            <TextView
+                android:id="@+id/judulpoli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poli Tujuan :"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/judulnama"
+                android:textSize="18sp"
+                android:textColor="#fff"/>
+            <TextView
+                android:id="@+id/poli_tujuan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Poli Tujuan"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@id/judulpoli"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@+id/nama_pasien" />
+
+
+            <TextView
+                android:id="@+id/judulid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Id Pendaftaran :"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/judulpoli"
+                android:textSize="18sp"
+                android:textColor="#fff"/>
+            <TextView
+                android:id="@+id/id_pendaftaran"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="id pendaftaran"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@id/judulid"
+                app:layout_constraintTop_toBottomOf="@+id/poli_tujuan" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

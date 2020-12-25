@@ -85,7 +85,7 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
-        dateFormatter = new SimpleDateFormat("YYYY-MM-dd", Locale.US);
+        dateFormatter = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
 
         tgl_lahir = (EditText) findViewById(R.id.tgl_lahir);
         btDatePicker = (Button) findViewById(R.id.bt_datepicker);
@@ -162,7 +162,6 @@ public class ProfileActivity extends AppCompatActivity {
         datePickerDialog.show();
     }
 
-    //getUserDetail
     private void getUserDetail() {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
@@ -179,7 +178,6 @@ public class ProfileActivity extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             String success = jsonObject.getString("success");
                             JSONArray jsonArray = jsonObject.getJSONArray("read");
-
 
                             if (success.equals("1")) {
                                 for (int i = 0; i < jsonArray.length(); i++) {
@@ -221,8 +219,6 @@ public class ProfileActivity extends AppCompatActivity {
 
                     }
                 })
-
-
 
         {
 

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".PoliActivity">
+
+    <ImageView
+        android:id="@+id/gambarlogopoli"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:src="@drawable/ic_rumah_sakit"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gambarlogopoli"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Silahkan lengkapi isian Formulir Pendaftaran dibawah :"
+        android:textSize="27dp"
+        android:textColor="#000"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_poli"
+            android:layout_width="304dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/tanggalperiksa"
+                android:layout_width="304dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:hint="Tanggal Periksa"
+                android:textColor="@color/colorTextBlack" />
+
+            <Button
+                android:id="@+id/bt_pilihtanggal"
+                android:layout_width="47dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:drawableStart="@drawable/ic_date_white" />
+        </LinearLayout>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/tunggu"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_daftar"
+        android:backgroundTint="@color/colorButton"
+        android:textColor="#fff"
+        android:text="Konfirmasi"
+        android:layout_marginTop="160dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp" />
+</LinearLayout>

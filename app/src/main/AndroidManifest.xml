@@ -13,14 +13,18 @@
         android:roundIcon="@drawable/ic_rumah_sakit"
         android:supportsRtl="true"
         android:theme="@style/AppThemeRegist">
-
+        <activity android:name=".BuktiDaftarActivity"></activity>
+        <activity android:name=".PoliActivity" />
+<!--        <activity android:name=".DaftarPoliActivity" />-->
+        <activity android:name=".ContactUsActivity" />
+        <activity android:name=".AboutUsActivity" />
+        <activity android:name="ListPendaftaranActivity"/>
         <activity
             android:name=".ProfileActivity"
-            android:label="Rumah Sakit">
-        </activity>
-        <activity android:name=".HomeActivity"
+            android:label="Rumah Sakit" />
+        <activity
+            android:name=".HomeActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
