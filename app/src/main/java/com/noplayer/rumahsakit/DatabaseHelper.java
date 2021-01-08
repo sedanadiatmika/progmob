@@ -22,6 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_NO_ANTRIAN = "no_antrian";
     public static final String COLUMN_POLI_TUJUAN = "poli_tujuan";
     public static final String COLUMN_ID_USER = "id_user";
+    public static final String COLUMN_STATUS_PENDAFTARAN = "status_pendaftaran";
 
     private Context context;
 
@@ -42,7 +43,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_TANGGAL_PERIKSA + " TEXT NOT NULL," +
                 COLUMN_POLI_TUJUAN + " TEXT NOT NULL," +
                 COLUMN_NO_ANTRIAN + " TEXT NOT NULL," +
-                COLUMN_ID_USER + " TEXT NOT NULL" +
+                COLUMN_ID_USER + " TEXT NOT NULL," +
+                COLUMN_STATUS_PENDAFTARAN + " TEXT NOT NULL" +
                 " )";
 
         db.execSQL(SQL_CREATE_TABLE);
@@ -75,8 +77,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 map.put(COLUMN_ID, cursor.getString(0));
                 map.put(COLUMN_NAMA_USER, cursor.getString(1));
                 map.put(COLUMN_TANGGAL_PERIKSA, cursor.getString(2));
-                map.put(COLUMN_NO_ANTRIAN, cursor.getString(3));
-                map.put(COLUMN_POLI_TUJUAN, cursor.getString(4));
+                map.put(COLUMN_POLI_TUJUAN, cursor.getString(3));
+                map.put(COLUMN_NO_ANTRIAN, cursor.getString(4));
+                map.put(COLUMN_STATUS_PENDAFTARAN, cursor.getString(6));
                 wordList.add(map);
             } while (cursor.moveToNext());
         }
@@ -87,10 +90,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return wordList;
     }
 
-    public void insert(String nama_user, String tanggal_periksa, String poli_tujuan, String no_antrian, String id_user) {
+    public void insert(String nama_user, String tanggal_periksa, String poli_tujuan, String no_antrian, String id_user, String status_pendaftaran) {
         SQLiteDatabase database = this.getWritableDatabase();
-        String queryValues = "INSERT INTO " + TABLE_NAME + " (nama_user, tanggal_periksa, poli_tujuan, no_antrian, id_user) " +
-                "VALUES ('" + nama_user + "', '" + tanggal_periksa + "', '" +poli_tujuan+ "', '" + no_antrian + "', '" + id_user + "')";
+        String queryValues = "INSERT INTO " + TABLE_NAME + " (nama_user, tanggal_periksa, poli_tujuan, no_antrian, id_user, status_pendaftaran) " +
+                "VALUES ('" + nama_user + "', '" + tanggal_periksa + "', '" +poli_tujuan+ "', '" + no_antrian + "', '" + id_user + "', '" + status_pendaftaran + "')";
         Log.e("insert sqlite ", "" + queryValues);
         database.execSQL(queryValues);
         database.close();

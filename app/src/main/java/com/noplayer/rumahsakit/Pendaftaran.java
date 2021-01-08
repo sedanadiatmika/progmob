@@ -8,7 +8,13 @@ public class Pendaftaran {
     private String tanggalPeriksa;
     private String idPendaftaran;
 
+    private String status;
+
     public Pendaftaran(){}
+
+    public String getStatusPendaftaran() {return status; }
+
+    public void setStatusPendaftaran (String status) {this.status = status; }
 
     public String getTanggalPeriksa() {
         return tanggalPeriksa;

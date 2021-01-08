@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "652457506009",
+    "project_id": "rumahsakitapp",
+    "storage_bucket": "rumahsakitapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652457506009:android:a99828a4a4a354ee4a3ac8",
+        "android_client_info": {
+          "package_name": "com.noplayer.rumahsakit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "652457506009-mvvjtlnhl91162clfenpjobcfp3vtc9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzEbJ2IlJCnm-pzCx5gc241BHHlMhIv6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "652457506009-mvvjtlnhl91162clfenpjobcfp3vtc9n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

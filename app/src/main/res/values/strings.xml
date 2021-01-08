@@ -5,4 +5,6 @@
         <item>Laki-laki</item>
         <item>Perempuan</item>
     </string-array>
+
+    <string name="profinfo">Account Info</string>
 </resources>

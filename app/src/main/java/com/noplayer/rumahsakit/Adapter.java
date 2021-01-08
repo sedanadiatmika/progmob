@@ -40,6 +40,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.poliTujuan.setText(pendaftarans.get(position).getPoliTujuan());
         holder.tanggalPeriksa.setText(pendaftarans.get(position).getTanggalPeriksa());
         holder.idPendaftaran.setText(pendaftarans.get(position).getIdPendaftaran());
+        holder.statusPendaftaran.setText(pendaftarans.get(position).getStatusPendaftaran());
     }
 
     @Override
@@ -48,7 +49,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView noAntre, namaPasien, poliTujuan, tanggalPeriksa, idPendaftaran;
+        TextView noAntre, namaPasien, poliTujuan, tanggalPeriksa, idPendaftaran, statusPendaftaran;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -58,16 +59,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             poliTujuan = itemView.findViewById(R.id.poli_tujuan);
             tanggalPeriksa = itemView.findViewById(R.id.tanggal_periksa);
             idPendaftaran = itemView.findViewById(R.id.id_pendaftaran);
-
-
+            statusPendaftaran = itemView.findViewById(R.id.status_pendaftaran);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int position = getAdapterPosition();
-
                     Toast.makeText(v.getContext(), "Item Position", Toast.LENGTH_SHORT).show();
-
                 }
             });
         }

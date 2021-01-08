@@ -8,4 +8,11 @@
     <color name="colorPrimaryDark2">#004D40</color>
     <color name="colorPrimary2">#00695C</color>
     <color name="colorButton">#004D40</color>
+    <color name="green">#ADFF2F</color>
+    <color name="red">#DC143C</color>
+    <color name="blue">#87CEFA</color>
+    <color name="whiteBodyColor">#FCFCFC</color>
+    <color name="botnav">#48D1CC</color>
+    <color name="whiteBodyColortrans">#0DFFFFFF</color>
+    <color name="profileAccentColor">#F7F7F7</color>
 </resources>

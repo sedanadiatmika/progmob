@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminDetailRwtActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="16dp"
+        app:cardPreventCornerOverlap="false">
+
+        <TextView
+            android:id="@+id/txtNamaDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Pasien"
+            android:textSize="14sp"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="14dp"
+            style="@style/textInputHintStyle"/>
+
+        <TextView
+            android:id="@+id/txtNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nia Utami"
+            android:textSize="12sp"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="34dp"/>
+
+        <TextView
+            android:id="@+id/txtPoliDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poli"
+            android:textSize="14sp"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="54dp"
+            style="@style/textInputHintStyle" />
+
+        <TextView
+            android:id="@+id/txtPoli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Umum"
+            android:textSize="12sp"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="74dp"/>
+
+        <TextView
+            android:id="@+id/txtStatusDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textSize="14sp"
+            style="@style/textInputHintStyle"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="100dp" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belum Disetujui"
+            android:textSize="12sp"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="120dp" />
+
+
+        <TextView
+            android:id="@+id/txtTanggalDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Pemeriksaan"
+            android:textSize="14sp"
+            style="@style/textInputHintStyle"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="140dp" />
+
+        <TextView
+            android:id="@+id/txtTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pemeriksaan Belum Disetujui"
+            android:textSize="12sp"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="160dp" />
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

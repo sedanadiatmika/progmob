@@ -47,7 +47,7 @@ import java.util.Map;
 public class ListPendaftaranActivity extends AppCompatActivity {
     String TAG = "ListPendaftaran";
 
-    private TextView no_antre, namapasien, tgl_lahir, poli_tujuan, tanggalperiksa, qrcode;
+    private TextView no_antre, namapasien, tgl_lahir, poli_tujuan, tanggalperiksa, qrcode, statuspendaftaran;
     RecyclerView recyclerView;
     List<Pendaftaran> pendaftarans;
     Adapter adapter;
@@ -66,6 +66,7 @@ public class ListPendaftaranActivity extends AppCompatActivity {
     public static final String TAG_DATE = "tanggal_periksa";
     public static final String TAG_POLI = "poli_tujuan";
     public static final String TAG_ANTR = "no_antrian";
+    public static final String TAG_STTS = "status_pendaftaran";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,6 +127,7 @@ public class ListPendaftaranActivity extends AppCompatActivity {
             String tanggal = row.get(i).get(TAG_DATE);
             String poli = row.get(i).get(TAG_POLI);
             String antre = row.get(i).get(TAG_ANTR);
+            String status = row.get(i).get(TAG_STTS);
 
             Pendaftaran pendaftaran = new Pendaftaran();
             pendaftaran.setIdPendaftaran(id);
@@ -133,6 +135,7 @@ public class ListPendaftaranActivity extends AppCompatActivity {
             pendaftaran.setPoliTujuan(poli);
             pendaftaran.setTanggalPeriksa(tanggal);
             pendaftaran.setNoAntre(antre);
+            pendaftaran.setStatusPendaftaran(status);
 
             pendaftarans.add(pendaftaran);
 
@@ -218,6 +221,7 @@ public class ListPendaftaranActivity extends AppCompatActivity {
                                     pendaftaran.setNoAntre(jsonObj.getString("no_antrian"));
                                     pendaftaran.setTanggalPeriksa(jsonObj.getString("tanggal_periksa"));
                                     pendaftaran.setIdPendaftaran(jsonObj.getString("id"));
+                                    pendaftaran.setStatusPendaftaran(jsonObj.getString("status_pendaftaran"));
                                     pendaftarans.add(pendaftaran);
 
                                     String id_pendaftaran = jsonObj.getString("id");
@@ -225,8 +229,9 @@ public class ListPendaftaranActivity extends AppCompatActivity {
                                     String poli = jsonObj.getString("poli_tujuan");
                                     String antri = jsonObj.getString("no_antrian");
                                     String tanggal = jsonObj.getString("tanggal_periksa");
+                                    String status = jsonObj.getString("status_pendaftaran");
 
-                                    SQLite.insert(nama, tanggal, poli, antri, getId);
+                                    SQLite.insert(nama, tanggal, poli, antri, getId, status);
 
                                 } catch (JSONException e) {
                                     e.printStackTrace();
